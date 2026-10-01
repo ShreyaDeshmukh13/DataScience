@@ -1,0 +1,205 @@
+{
+  "cv_baseline": [
+    {
+      "Model": "Logistic Regression",
+      "Train accuracy": 0.9,
+      "CV accuracy": "0.890 \u00b1 0.019",
+      "CV F1 (leaves)": "0.561 \u00b1 0.098",
+      "CV recall (leaves)": "0.442 \u00b1 0.096"
+    },
+    {
+      "Model": "Decision Tree",
+      "Train accuracy": 1.0,
+      "CV accuracy": "0.794 \u00b1 0.017",
+      "CV F1 (leaves)": "0.356 \u00b1 0.081",
+      "CV recall (leaves)": "0.358 \u00b1 0.102"
+    },
+    {
+      "Model": "Random Forest",
+      "Train accuracy": 1.0,
+      "CV accuracy": "0.863 \u00b1 0.007",
+      "CV F1 (leaves)": "0.315 \u00b1 0.078",
+      "CV recall (leaves)": "0.200 \u00b1 0.061"
+    },
+    {
+      "Model": "k-NN",
+      "Train accuracy": 0.876,
+      "CV accuracy": "0.852 \u00b1 0.015",
+      "CV F1 (leaves)": "0.228 \u00b1 0.126",
+      "CV recall (leaves)": "0.142 \u00b1 0.086"
+    }
+  ],
+  "tuning": [
+    {
+      "Model": "Logistic Regression",
+      "Combinations": 8,
+      "Best parameters": "{'C': 1, 'class_weight': None}",
+      "Baseline CV F1": 0.561,
+      "Tuned CV F1": 0.561,
+      "Gain": 0.0
+    },
+    {
+      "Model": "Decision Tree",
+      "Combinations": 48,
+      "Best parameters": "{'class_weight': 'balanced', 'max_depth': 4, 'min_samples_leaf': 10}",
+      "Baseline CV F1": 0.3556,
+      "Tuned CV F1": 0.4288,
+      "Gain": 0.0732
+    },
+    {
+      "Model": "Random Forest",
+      "Combinations": 36,
+      "Best parameters": "{'class_weight': 'balanced', 'max_depth': 8, 'min_samples_leaf': 3, 'n_estimators': 100}",
+      "Baseline CV F1": 0.3153,
+      "Tuned CV F1": 0.4504,
+      "Gain": 0.135
+    },
+    {
+      "Model": "k-NN",
+      "Combinations": 24,
+      "Best parameters": "{'n_neighbors': 3, 'p': 1, 'weights': 'uniform'}",
+      "Baseline CV F1": 0.2282,
+      "Tuned CV F1": 0.2798,
+      "Gain": 0.0516
+    }
+  ],
+  "test_baseline": [
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.8605442176870748,
+      "Precision": 0.6153846153846154,
+      "Recall": 0.3404255319148936,
+      "F1-Score": 0.4383561643835616,
+      "ROC-AUC": 0.8115255405289,
+      "PR-AUC": 0.5836342531326222,
+      "Missed leavers (FN)": 31,
+      "False alarms (FP)": 10
+    },
+    {
+      "Model": "Decision Tree",
+      "Accuracy": 0.7653061224489796,
+      "Precision": 0.3103448275862069,
+      "Recall": 0.3829787234042553,
+      "F1-Score": 0.34285714285714286,
+      "ROC-AUC": 0.6105177017830993,
+      "PR-AUC": 0.21749492166639217,
+      "Missed leavers (FN)": 29,
+      "False alarms (FP)": 40
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.8503401360544217,
+      "Precision": 0.6363636363636364,
+      "Recall": 0.14893617021276595,
+      "F1-Score": 0.2413793103448276,
+      "ROC-AUC": 0.7843483504177793,
+      "PR-AUC": 0.46934839422456,
+      "Missed leavers (FN)": 40,
+      "False alarms (FP)": 4
+    },
+    {
+      "Model": "k-NN",
+      "Accuracy": 0.8435374149659864,
+      "Precision": 0.5384615384615384,
+      "Recall": 0.14893617021276595,
+      "F1-Score": 0.23333333333333334,
+      "ROC-AUC": 0.5946248600223965,
+      "PR-AUC": 0.27338749081237496,
+      "Missed leavers (FN)": 40,
+      "False alarms (FP)": 6
+    }
+  ],
+  "test_tuned": [
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.8605442176870748,
+      "Precision": 0.6153846153846154,
+      "Recall": 0.3404255319148936,
+      "F1-Score": 0.4383561643835616,
+      "ROC-AUC": 0.8115255405289,
+      "PR-AUC": 0.5836342531326222,
+      "Missed leavers (FN)": 31,
+      "False alarms (FP)": 10
+    },
+    {
+      "Model": "Decision Tree",
+      "Accuracy": 0.7278911564625851,
+      "Precision": 0.30120481927710846,
+      "Recall": 0.5319148936170213,
+      "F1-Score": 0.38461538461538464,
+      "ROC-AUC": 0.7038073908174692,
+      "PR-AUC": 0.3320233474963539,
+      "Missed leavers (FN)": 22,
+      "False alarms (FP)": 58
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.826530612244898,
+      "Precision": 0.43333333333333335,
+      "Recall": 0.2765957446808511,
+      "F1-Score": 0.33766233766233766,
+      "ROC-AUC": 0.781462658282367,
+      "PR-AUC": 0.43332744590377004,
+      "Missed leavers (FN)": 34,
+      "False alarms (FP)": 17
+    },
+    {
+      "Model": "k-NN",
+      "Accuracy": 0.8469387755102041,
+      "Precision": 0.5454545454545454,
+      "Recall": 0.2553191489361702,
+      "F1-Score": 0.34782608695652173,
+      "ROC-AUC": 0.6642260315272633,
+      "PR-AUC": 0.3434174933347724,
+      "Missed leavers (FN)": 35,
+      "False alarms (FP)": 10
+    }
+  ],
+  "thresholds": [
+    {
+      "Threshold": 0.5,
+      "Flagged employees": 26,
+      "Precision": 0.6153846153846154,
+      "Recall": 0.3404255319148936,
+      "F1-Score": 0.4383561643835616,
+      "Leavers caught": 16,
+      "Leavers missed": 31
+    },
+    {
+      "Threshold": 0.4,
+      "Flagged employees": 34,
+      "Precision": 0.6176470588235294,
+      "Recall": 0.44680851063829785,
+      "F1-Score": 0.5185185185185185,
+      "Leavers caught": 21,
+      "Leavers missed": 26
+    },
+    {
+      "Threshold": 0.3,
+      "Flagged employees": 48,
+      "Precision": 0.5,
+      "Recall": 0.5106382978723404,
+      "F1-Score": 0.5052631578947369,
+      "Leavers caught": 24,
+      "Leavers missed": 23
+    },
+    {
+      "Threshold": 0.25,
+      "Flagged employees": 58,
+      "Precision": 0.5,
+      "Recall": 0.6170212765957447,
+      "F1-Score": 0.5523809523809524,
+      "Leavers caught": 29,
+      "Leavers missed": 18
+    },
+    {
+      "Threshold": 0.2,
+      "Flagged employees": 71,
+      "Precision": 0.4225352112676056,
+      "Recall": 0.6382978723404256,
+      "F1-Score": 0.5084745762711864,
+      "Leavers caught": 30,
+      "Leavers missed": 17
+    }
+  ]
+}
