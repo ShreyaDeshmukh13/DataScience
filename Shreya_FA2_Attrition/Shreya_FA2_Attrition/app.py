@@ -127,7 +127,9 @@ def random_record(X_test, y_test, leaver):
 def typical(X, y, leaver):
     """Median (numeric) / most common (categorical) value among leavers or stayers."""
     sub = X[y == int(leaver)]
-    return pd.Series({c: (sub[c].mode().iloc[0] if sub[c].dtype == object else int(sub[c].median())) for c in X.columns})
+    # is_numeric_dtype (not "dtype == object"): pandas 3 stores text as the new `str` dtype
+    return pd.Series({c: (int(sub[c].median()) if pd.api.types.is_numeric_dtype(sub[c]) else sub[c].mode().iloc[0])
+                      for c in X.columns})
 
 
 def high_risk(X, y):
